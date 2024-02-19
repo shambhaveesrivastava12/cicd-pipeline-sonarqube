@@ -1,9 +1,9 @@
-name: Your Workflow Name
+name: CICD Practice
 
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   install-dependencies:
