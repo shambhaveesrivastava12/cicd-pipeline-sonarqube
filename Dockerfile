@@ -2,7 +2,7 @@ FROM node:latest
 
 WORKDIR /usr/client/src/app
 
-COPY package.json ./
+COPY /client/package.json ./
 
 RUN npm install
 
