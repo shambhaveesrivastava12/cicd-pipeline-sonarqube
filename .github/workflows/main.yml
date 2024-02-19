@@ -23,7 +23,7 @@ jobs:
 
     - name: Build Docker image
       run: |
-        docker build -t MTC-Frontend .
+        docker build -t mtc-frontend .
         docker images
 
     - name: Log in to Docker Hub
@@ -34,11 +34,7 @@ jobs:
 
     - name: Push Docker image to Docker Hub
       run: |
-        docker tag MTC-Frontend ${{ secrets.DOCKER_USERNAME }}/MTC-Frontend:latest
-        docker push ${{ secrets.DOCKER_USERNAME }}/MTC-Frontend:latest
+        docker tag mtc-frontend ${{ secrets.DOCKER_USERNAME }}/mtc-frontend:latest
+        docker push ${{ secrets.DOCKER_USERNAME }}/mtc-frontend:latest
 
-    - name: Archive artifact
-      uses: actions/upload-artifact@v2
-      with:
-        name: my-artifact
-        path: build
+  
