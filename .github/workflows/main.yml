@@ -38,4 +38,4 @@ jobs:
         node-version: '14'
 
     - name: Build application
-       run: npm run build
+       runs-on: npm run build
