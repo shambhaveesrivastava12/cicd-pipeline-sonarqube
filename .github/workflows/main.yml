@@ -20,6 +20,9 @@ jobs:
         with:
           node-version: '14'
 
+      - name: Navigate to client directory
+        run: cd client
+
       - name: Install dependencies
         run: |
           npm install -g react-scripts
@@ -37,8 +40,8 @@ jobs:
         with:
           node-version: '14'
 
+      - name: Navigate to client directory
+        run: cd client
+
       - name: Build application
         run: npm run build
-
-      - name: View npm debug log
-        run: cat /home/runner/.npm/_logs/2024-02-20T06_03_49_586Z-debug.log
