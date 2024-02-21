@@ -20,8 +20,14 @@ jobs:
         with:
           node-version: '14'
 
+      - name: List files in the repository
+        run: ls -R
+
       - name: Navigate to client directory
         run: cd client
+
+      - name: List files in the client directory
+        run: ls -R
 
       - name: Install dependencies
         run: |
@@ -45,3 +51,6 @@ jobs:
 
       - name: Build application
         run: npm run build
+
+      - name: View npm debug log
+        run: cat /home/runner/.npm/_logs/2024-02-20T06_03_49_586Z-debug.log
