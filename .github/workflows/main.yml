@@ -20,11 +20,8 @@ jobs:
         with:
           node-version: '14'
 
-      - name: List files in the repository
-        run: ls -R
-
-      - name: Navigate to client directory
-        run: cd client
+      - name: Navigate to project directory
+        run: cd /home/runner/work/cicd-pipeline-sonarqube/cicd-pipeline-sonarqube/
 
       - name: List files in the client directory
         run: ls -R
